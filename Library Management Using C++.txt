@@ -1,0 +1,105 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+void nov()
+{
+ int ch;
+ cout<<":::::NOVELS:::::";
+ cout<<"\n\nenter choice for NOVELS\n1:DARKNESS AT NOON\n2:TWILIGHT\n3:HARRY POTTER\n";
+ cin>>ch;
+ switch (ch)
+  {
+ case 1:cout<<"\n\n\nNAME:::DARKNESS AT NOON:::";
+	cout<<"\nAUTHOR::Arthur keostler";
+	cout<<"\nPUBLISHED YEAR::1941";
+	cout<<"\nPRICE::$150";
+	break;
+ case 2:cout<<"\n\n\nNAME:::TWILIGHT:::";
+	cout<<"\nAUTHUR::Stephenie Meyer";
+	cout<<"\nPUBLISHED YEAR::2005";
+	cout<<"\nPRICE::$250";
+	break;
+ case 3:cout<<"\n\n\nNAME:::HARRY POTTER:::";
+	cout<<"\nAUTHUR::J.K.Rowling";
+	cout<<"\nPUBLISHED YEAR::1997";
+	cout<<"\nPRICE::$200";
+	break;
+ default:cout<<"\ninvalid choice";
+  }
+  getch();
+}
+ void tb()
+ {
+  int ch;
+  cout<<":::::TEXTBOOKS:::::";
+  cout<<"\n\nenter choice for text books\n1:DATA STRUCTURES\n2:DIGITAL TECHNIQUES\n3:OBJECT ORIENTED PROGRAMING";
+  cin>>ch;
+  switch (ch)
+   {
+    case 1:cout<<"\n\n\nNAME:::DATA STRUCTURES:::";
+	   cout<<"\nSCHEME::I";
+	   cout<<"\nPUBLISHER::Technical Publications";
+	   cout<<"\nPRICE:$90";
+	   break;
+    case 2:cout<<"\n\n\nNAME:::DIGITAL TECHNIQUES:::";
+	   cout<<"\nSCHEME::I";
+	   cout<<"PUBLISHER::technical Publications";
+	   cout<<"\nPRICE::$92";
+	   break;
+    case 3:cout<<"\n\n\nNAME:::OBJECT ORIENTED PROGRAMING:::";
+	   cout<<"\nSCHEME FOR::I ";
+	   cout<<"PUBLISHERS::Technical Publications";
+	   cout<<"\nPRICE::$89";
+	   break;
+    default: cout<<"invalid choice";
+   }
+  getch();
+ }
+void ref()
+ {
+ int ch;
+ cout<<":::::REFERENCE BOOKS:::::";
+ cout<<"\nenter choice for reference book\n1:EYNCYCLOPEDIA\n2:DICTIONARY\n3:ATLAS\n";
+ cin>>ch;
+ switch (ch)
+ {
+ case 1:cout<<"\n\n\n:::EYNCYCLPEDIA:::";
+	cout<<"\nPRICE::$50";
+	break;
+ case 2:cout<<"\n\n\n:::DICTIONARY:::";
+	cout<<"\nPRICE::$35";
+	break;
+ case 3:cout<<"\n\n\n:::ATLAS:::";
+	cout<<"\nPRICE::$30";
+	break;
+ default:cout<<"invalid choice";
+ }
+ getch();
+ }
+void main()
+{
+int ch,opt;
+clrscr();
+cout<<"enter a choice\n1:NOVELS\n2:TEXTBOOKS\n3:REFERENCE\n";
+cin>>ch;
+if(ch<=4)
+switch (ch)
+ {
+ case 1: nov();
+	 break;
+ case 2: tb();
+	 break;
+ case 3: ref();
+	 break;
+ default:cout<<"invalid choice";
+ }
+ cout<<"\ndo you want to continue?"<<endl<<"1.Yes\n2.No"<<endl;
+ cout<<"Enter your choice by selecting number=";
+ cin>>opt;
+ switch(opt)
+ {
+ case 1:main();
+ case 2:exit(0);
+ }
+ getch();
+}
